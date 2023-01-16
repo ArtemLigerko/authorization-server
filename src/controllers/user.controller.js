@@ -32,6 +32,10 @@ class UserController {
 
   async activate(req, res, next) {
     try {
+      const activationLink = req.params.link;
+      await userService.activate(activationLink);
+      console.log(process.env.CLIENT_URL);
+      return res.redirect(process.env.CLIENT_URL);
     } catch (e) {
       console.log(e);
     }
@@ -46,12 +50,6 @@ class UserController {
 
   async getUsers(req, res, next) {
     try {
-      // test
-      // const user = new userModel({
-      //   email: "mail@gmail.com",
-      //   password: "12345",
-      // });
-      // await user.save();
       res.json("Server working");
     } catch (e) {
       console.log(e);

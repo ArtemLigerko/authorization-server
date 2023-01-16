@@ -12,21 +12,21 @@ class UserController {
       });
       return res.json(userData);
     } catch (e) {
-      console.log(e);
+      next(e);
     }
   }
 
   async login(req, res, next) {
     try {
     } catch (e) {
-      console.log(e);
+      next(e);
     }
   }
 
   async logout(req, res, next) {
     try {
     } catch (e) {
-      console.log(e);
+      next(e);
     }
   }
 
@@ -37,14 +37,14 @@ class UserController {
       console.log(process.env.CLIENT_URL);
       return res.redirect(process.env.CLIENT_URL);
     } catch (e) {
-      console.log(e);
+      next(e);
     }
   }
 
   async refresh(req, res, next) {
     try {
     } catch (e) {
-      console.log(e);
+      next(e);
     }
   }
 

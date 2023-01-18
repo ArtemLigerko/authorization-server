@@ -33,7 +33,7 @@ const start = async () => {
       console.error("connection error:", DB_URL);
     });
 
-    app.listen(PORT, () => console.log(`server tarted on port: ${PORT}`));
+    app.listen(PORT, () => console.log(`server started on port: ${PORT}`));
   } catch (e) {
     console.log(e);
   }
